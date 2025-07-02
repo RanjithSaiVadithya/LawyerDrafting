@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lawyer Drafting - Master Legal Drafting with AI & Expert Mentorship</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --primary-bg: #0b0f19;
+            --section-bg: #121826;
+            --card-bg: #1e2633;
+            --accent-color: #ff4444;
+            --accent-hover: #e63939;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border-color: #2e3748;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(11, 15, 25, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-main);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--primary-bg);
+            padding: 120px 0 80px;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--text-main), var(--text-muted));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 68, 68, 0.3);
+        }
+
+        .cta-button:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 68, 68, 0.4);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section:nth-child(even) {
+            background: var(--section-bg);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: var(--text-main);
+        }
+
+        /* Useful For Section */
+        .useful-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .useful-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .useful-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .useful-card i {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .useful-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Learning Grid */
+        .learning-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .learning-item {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+            transition: all 0.3s ease;
+        }
+
+        .learning-item:hover {
+            transform: translateX(5px);
+        }
+
+        .learning-item i {
+            color: var(--accent-color);
+            margin-right: 1rem;
+        }
+
+        /* Why ChatGPT Section */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .why-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .why-card:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        .why-card h3 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .future-statement {
+            background: var(--accent-color);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 3rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 3rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .comparison-table th {
+            background: var(--section-bg);
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        /* Mentor Section */
+        .mentor-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        .mentor-image {
+            text-align: center;
+        }
+
+        .mentor-avatar {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: var(--card-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--accent-color);
+            border: 4px solid var(--accent-color);
+        }
+
+        .mentor-info h3 {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .mentor-info .title {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .highlight-list {
+            list-style: none;
+        }
+
+        .highlight-list li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .highlight-list li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--accent-color);
+            position: absolute;
+            top: -10px;
+            left: 20px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            padding-top: 1rem;
+        }
+
+        .testimonial-author {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .stars {
+            color: #ffd700;
+            margin-bottom: 1rem;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 3rem auto 0;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: var(--accent-color);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-answer.active {
+            padding: 0 1.5rem 1.5rem;
+            max-height: 200px;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-icon.active {
+            transform: rotate(180deg);
+        }
+
+        /* Contact Section */
+        .contact-form {
+            max-width: 600px;
+            margin: 3rem auto 0;
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            background: var(--section-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-main);
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-button {
+            width: 100%;
+            background: var(--accent-color);
+            color: white;
+            padding: 1rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--section-bg);
+            padding: 3rem 0 1rem;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .mentor-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .mentor-avatar {
+                margin: 0 auto;
+            }
+
+            .useful-grid,
+            .learning-grid,
+            .why-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .hero {
+                padding: 100px 0 60px;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .useful-card,
+            .why-card,
+            .testimonial-card {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Success Message */
+        .success-message {
+            background: #10b981;
+            color: white;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">Lawyer Drafting</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#useful">Services</a></li>
+                <li><a href="#mentor">Mentor</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <style>
+        /* Custom styles for the hero section and animations */
+
+
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(63, 94, 251, 0.1), rgba(76, 201, 240, 0.1));
+            animation: float 8s ease-in-out infinite;
+            z-index: 1;
+        }
+
+        .shape1 {
+            width: 250px;
+            height: 250px;
+            top: 10%;
+            right: 25%;
+            animation-delay: 0s;
+        }
+
+        .shape2 {
+            width: 150px;
+            height: 150px;
+            top: 60%;
+            right: 35%;
+            animation-delay: 2s;
+        }
+
+        .shape3 {
+            width: 80px;
+            height: 80px;
+            top: 30%;
+            right: 15%;
+            animation-delay: 4s;
+        }
+
+        .hero-image-container {
+            position: relative;
+            z-index: 2;
+        }
+        .hero-image-container .hero-img {
+            width: 120%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(20px, 30px);
+            }
+
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+    </style>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container mx-auto px-6 row flex-col lg:flex-row items-center justify-between gap-12">
+            <div class="hero-content col-lg-7 " data-aos="fade-up">
+                <h1>Learn. Draft. Excel.</h1>
+                <p class="subtitle">Master Legal Drafting with the Power of AI & Expert Mentorship</p>
+                <p>Discover how AI-powered guidance and 15+ years of real-world legal expertise combine to transform the
+                    way you draft, learn, and grow as a legal professional.</p>
+                <a href="#contact" class="cta-button">Get Started</a>
+            </div>
+
+            <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <div class="hero-image-container w-full max-w-md relative">
+                    <!-- Decorative Shapes -->
+                    <div class="shape shape1"></div>
+                    <div class="shape shape2"></div>
+                    <div class="shape shape3"></div>
+
+                    <!-- Main Image hero-image-container -->
+                    <div
+                        class="hero-image-container hero-image-overlay absolute inset-0 bg-gradient-to-r from-transparent to-black opacity-50 rounded-2xl shadow-2xl z-0">
+
+
+                        <img src="./ligal.png"
+                            alt="AI and human intelligence balanced on a scale of justice, representing legal tech"
+                            class="rounded-2xl shadow-2xl w-full h-auto object-cover relative z-10 hero-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true, // Whether animation should happen only once - while scrolling down
+            mirror: false, // Whether elements should animate out while scrolling past them
+        });
+    </script>
+
+
+    <!-- This is Useful For Section -->
+    <section id="useful" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">This is Useful For</h2>
+            <div class="useful-grid">
+                <div class="useful-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-balance-scale"></i>
+                    <h3>Lawyers</h3>
+                    <p>Enhance your drafting efficiency and accuracy with AI-powered tools and expert guidance.</p>
+                </div>
+                <div class="useful-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Law Students</h3>
+                    <p>Build strong foundational skills in legal drafting with practical, real-world applications.</p>
+                </div>
+                <div class="useful-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-edit"></i>
+                    <h3>Freelance Legal Drafters</h3>
+                    <p>Expand your service offerings and improve client satisfaction with professional drafting
+                        techniques.</p>
+                </div>
+                <div class="useful-card" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-heart"></i>
+                    <h3>Legal Enthusiasts</h3>
+                    <p>Develop valuable legal skills and understanding through structured learning and mentorship.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You Will Learn Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">What You Will Learn</h2>
+            <div class="learning-grid">
+                <div class="learning-item" data-aos="fade-right" data-aos-delay="100">
+                    <i class="fas fa-file-alt"></i>
+                    <strong>Legal Notices & Petitions</strong> - Master the art of drafting compelling legal notices and
+                    petitions.
+                </div>
+                <div class="learning-item" data-aos="fade-right" data-aos-delay="200">
+                    <i class="fas fa-handshake"></i>
+                    <strong>Contracts & Agreements</strong> - Create comprehensive contracts that protect your clients'
+                    interests.
+                </div>
+                <div class="learning-item" data-aos="fade-right" data-aos-delay="300">
+                    <i class="fas fa-gavel"></i>
+                    <strong>Court Pleadings & Affidavits</strong> - Draft persuasive court documents with precision and
+                    clarity.
+                </div>
+                <div class="learning-item" data-aos="fade-right" data-aos-delay="400">
+                    <i class="fas fa-home"></i>
+                    <strong>Wills, Deeds & Property Documents</strong> - Handle property and estate planning documents
+                    professionally.
+                </div>
+                <div class="learning-item" data-aos="fade-right" data-aos-delay="500">
+                    <i class="fas fa-building"></i>
+                    <strong>Corporate & Quasi-Judicial Drafting</strong> - Navigate complex business and regulatory
+                    documentation.
+                </div>
+                <div class="learning-item" data-aos="fade-right" data-aos-delay="600">
+                    <i class="fas fa-robot"></i>
+                    <strong>GPT Prompts for Legal Use</strong> - Leverage AI tools effectively for legal research and
+                    drafting.
+                </div>
+                <div class="learning-item" data-aos="fade-right" data-aos-delay="700">
+                    <i class="fas fa-check-circle"></i>
+                    <strong>Formatting & Compliance Tips</strong> - Ensure your documents meet all legal standards and
+                    requirements.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why ChatGPT for Legal Drafting Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Why ChatGPT for Legal Drafting?</h2>
+            <div class="why-grid">
+                <div class="why-card" data-aos="zoom-in" data-aos-delay="100">
+                    <h3>Speed & Accuracy</h3>
+                    <p>Dramatically reduce drafting time while maintaining high accuracy and consistency in your legal
+                        documents.</p>
+                </div>
+                <div class="why-card" data-aos="zoom-in" data-aos-delay="200">
+                    <h3>Real-Time Understanding</h3>
+                    <p>Get instant feedback and suggestions to improve your drafts as you work on them.</p>
+                </div>
+                <div class="why-card" data-aos="zoom-in" data-aos-delay="300">
+                    <h3>Templates Across Jurisdictions</h3>
+                    <p>Access templates and formats applicable across different legal jurisdictions and practice areas.
+                    </p>
+                </div>
+                <div class="why-card" data-aos="zoom-in" data-aos-delay="400">
+                    <h3>Career-Relevant Skill</h3>
+                    <p>Stay ahead in the legal profession by mastering tools that are becoming essential in modern
+                        practice.</p>
+                </div>
+                <div class="why-card" data-aos="zoom-in" data-aos-delay="500">
+                    <h3>Legal Creativity + Structure</h3>
+                    <p>Combine creative legal thinking with structured AI assistance for optimal results.</p>
+                </div>
+                <div class="why-card" data-aos="zoom-in" data-aos-delay="600">
+                    <h3>From Theory to Practical Use</h3>
+                    <p>Bridge the gap between academic legal knowledge and real-world application with hands-on
+                        training.</p>
+                </div>
+            </div>
+            <div class="future-statement" data-aos="fade-up" data-aos-delay="700">
+                <i class="fas fa-star"></i>
+                This is the Future of Legal Practice - Master It Today!
+            </div>
+        </div>
+    </section>
+
+    <!-- Lecture vs Mentoring Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Lecture vs Mentoring</h2>
+            <div class="comparison-table" data-aos="fade-up" data-aos-delay="200">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Aspect</th>
+                            <th>Traditional Lecture</th>
+                            <th>Our Mentoring Approach</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Format</strong></td>
+                            <td>One-way presentation</td>
+                            <td>Interactive dialogue & practice</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Style</strong></td>
+                            <td>Theoretical concepts</td>
+                            <td>Practical application focus</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Goal</strong></td>
+                            <td>Information transfer</td>
+                            <td>Skill development & mastery</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Interaction</strong></td>
+                            <td>Limited Q&A sessions</td>
+                            <td>Continuous feedback & guidance</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Duration</strong></td>
+                            <td>Fixed schedule</td>
+                            <td>Flexible, based on progress</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Focus</strong></td>
+                            <td>Generic content delivery</td>
+                            <td>Personalized learning path</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Instructor Role</strong></td>
+                            <td>Information provider</td>
+                            <td>Coach, guide & mentor</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mentor Section -->
+    <section id="mentor" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Meet Your Mentor</h2>
+            <div class="mentor-content">
+                <div class="mentor-image" data-aos="fade-right">
+                    <div class="mentor-avatar">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                </div>
+                <div class="mentor-info" data-aos="fade-left">
+                    <h3>Sarath Babu.R</h3>
+                    <p class="title">Advocate | Legal Mentor | Educator</p>
+                    <ul class="highlight-list">
+                        <li><strong>15+ Years of Courtroom Experience</strong> - Extensive practical knowledge across
+                            multiple legal domains</li>
+                        <li><strong>Post Graduate in Law</strong> - Strong academic foundation combined with real-world
+                            expertise</li>
+                        <li><strong>Mentored 1000+ Lawyers & Law Students</strong> - Proven track record of developing
+                            legal professionals</li>
+                        <li><strong>AI-Powered Legal Innovation</strong> - Pioneer in integrating technology with
+                            traditional legal practice</li>
+                        <li><strong>Specialized Training Programs</strong> - Customized learning experiences for
+                            different skill levels</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">What Our Students Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">Sarath sir's mentoring changed the way I approach legal drafting. The AI
+                        integration techniques have made me so much more efficient in my practice.</p>
+                    <p class="testimonial-author">– Aishwarya, Law Graduate</p>
+                </div>
+                <div class="testimonial-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">The personalized mentoring approach helped me understand complex legal
+                        concepts that I struggled with for years. Highly recommended!</p>
+                    <p class="testimonial-author">– Rajesh Kumar, Practicing Lawyer</p>
+                </div>
+                <div class="testimonial-card" data-aos="flip-left" data-aos-delay="300">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">As a law student, this mentoring program gave me practical skills that
+                        my college courses couldn't provide. The AI tools are game-changers.</p>
+                    <p class="testimonial-author">– Priya Sharma, Final Year Law Student</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-question">
+                        <span>Do I need prior AI or technical skills to join?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No, the program is completely beginner-friendly. We start from the basics and gradually build
+                            your skills in both legal drafting and AI tool usage.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question">
+                        <span>Is this program suitable for law students?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! The program is designed for everyone from beginners to advanced practitioners.
+                            Law students will find it particularly valuable for bridging the gap between theory and
+                            practice.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="faq-question">
+                        <span>Are templates and resources included?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you'll receive comprehensive templates, sample documents, and AI prompts that you can
+                            use immediately in your practice or studies.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="faq-question">
+                        <span>How long does the mentoring program take?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The program duration is flexible and depends on your learning pace and goals. Most students
+                            see significant improvement within 4-6 weeks of consistent practice.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="faq-question">
+                        <span>What makes this different from online courses?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Unlike generic online courses, this is personalized mentoring with direct feedback from an
+                            experienced practitioner. You get individual attention and customized guidance based on your
+                            specific needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Get Started Today</h2>
+            <div class="contact-form" data-aos="fade-up" data-aos-delay="200">
+                <div class="success-message" id="successMessage">
+                    Thank you for your interest! We'll get back to you soon.
+                </div>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message"
+                            placeholder="Tell us about your goals and how we can help you..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-nav">
+                <a href="#home">Home</a>
+                <a href="#useful">Services</a>
+                <a href="#mentor">Mentor</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Lawyer Drafting. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('.faq-icon');
+
+                // Close other FAQs
+                faqQuestions.forEach(otherQuestion => {
+                    if (otherQuestion !== question) {
+                        const otherAnswer = otherQuestion.nextElementSibling;
+                        const otherIcon = otherQuestion.querySelector('.faq-icon');
+                        otherAnswer.classList.remove('active');
+                        otherIcon.classList.remove('active');
+                    }
+                });
+
+                // Toggle current FAQ
+                answer.classList.toggle('active');
+                icon.classList.toggle('active');
+            });
+        });
+
+        // Contact Form Handling
+        const contactForm = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Get form data
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData);
+
+            // Simple validation
+            if (!data.name || !data.email) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            // Simulate form submission
+            setTimeout(() => {
+                successMessage.style.display = 'block';
+                contactForm.reset();
+
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 5000);
+            }, 500);
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(11, 15, 25, 0.98)';
+            } else {
+                header.style.background = 'rgba(11, 15, 25, 0.95)';
+            }
+        });
+
+        // Add mobile menu styles
+        const style = document.createElement('style');
+        style.textContent = `
+            @media (max-width: 768px) {
+                .nav-links.active {
+                    display: flex;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    width: 100%;
+                    background: rgba(11, 15, 25, 0.98);
+                    flex-direction: column;
+                    padding: 1rem 0;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                }
+                
+                .nav-links.active li {
+                    padding: 0.5rem 2rem;
+                }
+                
+                .mobile-menu.active span:nth-child(1) {
+                    transform: rotate(-45deg) translate(-5px, 6px);
+                }
+                
+                .mobile-menu.active span:nth-child(2) {
+                    opacity: 0;
+                }
+                
+                .mobile-menu.active span:nth-child(3) {
+                    transform: rotate(45deg) translate(-5px, -6px);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Add mobile menu toggle functionality
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('nav')) {
+                navLinks.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
+        });
+
+        // Add intersection observer for section highlighting
+        const sections = document.querySelectorAll('section[id]');
+        const navItems = document.querySelectorAll('.nav-links a[href^="#"]');
+
+        const observerOptions = {
+            rootMargin: '-50px 0px -50px 0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const currentId = entry.target.getAttribute('id');
+                    navItems.forEach(item => {
+                        item.classList.remove('active');
+                        if (item.getAttribute('href') === `#${currentId}`) {
+                            item.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Add active nav item styling
+        const navStyle = document.createElement('style');
+        navStyle.textContent = `
+            .nav-links a.active {
+                color: var(--accent-color);
+                position: relative;
+            }
+            
+            .nav-links a.active::after {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background: var(--accent-color);
+            }
+        `;
+        document.head.appendChild(navStyle);
+    </script>
+</body>
+
+</html>
